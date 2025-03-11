@@ -44,7 +44,14 @@ body {
     justify-content: space-between;
     height: 100%;
 }
-
+.header .logo-inner{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.header img{
+    mix-blend-mode: multiply;
+}
 .header .logo {
     font-size: 2rem;
     font-weight: 700;
@@ -52,6 +59,7 @@ body {
     text-transform: uppercase;
 
 }
+
 
 .nav-links {
     list-style: none;
@@ -135,6 +143,7 @@ body {
     flex-wrap: wrap; /* Чтобы элементы могли переноситься на новую строку */
     padding: 5% 0;
     text-align: center;
+    margin-bottom: 3%;
 }
 .features .container {
     box-sizing: border-box;
@@ -181,19 +190,65 @@ body {
 
 /* Медиазапрос для экрана шириной 480px (мобильные устройства) */
 @media (max-width: 480px) {
-    .feature {
-        width: 100%; /* Один элемент в ряду */
-        margin: 10px 0; /* Уменьшаем отступы для мобильных */
+    .header .container{
+        display: flex;
+        flex-direction: column;
+    }
+    .header nav ul{
+        margin-right: 6%;
+    }
+    .header nav ul li{
+        font-size: 0.8rem;
+    }
+    .header .logo{
+        font-size: 1.5rem;
+        margin-bottom: 2%;
+    }
+    .header img{
+        margin-bottom: 7%;
+    }
+    .hero .container .h2{
+        margin: 0;
+    }
+    .features .feature-inner{
+        display: flex;
+    }
+    .features .feature-inner .feature{
+        width: 10%;
+    }
+    .competitors h2, p, ul{
+        margin-right: 2%;
+        margin-left: 2%;
+    }
+    .contact .container .cta-btn{
+        width: 50%;
+    }
+    .roadmap .roadmap-inner img{
+        margin-top: 35%;
+        margin-left: 50%;
     }
 }
-
-
 /* Roadmap Section */
 .roadmap {
     background-color: var(--navy-color); /* cream */
     padding: 60px 0;
+    position: relative;
 }
+.roadmap .roadmap-inner{
+    display: flex;
+}
+.roadmap .container .img{
+    position: absolute;
+    right: 0;
+    top: 0;
 
+}
+.roadmap .container img{
+    mix-blend-mode: multiply;
+    width: 72%;
+    right: 0;
+    
+}
 .roadmap ul {
     list-style: none;
     text-align: left;
@@ -208,7 +263,11 @@ body {
 .competitors {
     padding: 60px 0;
     text-align: center;
-    margin-bottom: 5%;
+
+}
+.competitors .container{
+    margin-top: 6%;
+    margin-bottom: 4%;
 }
 .competitors h2{
     margin-bottom: 2%;
