@@ -116,7 +116,7 @@ body {
 }
 
 .hero .container .cta-btn:hover {
-
+    transform: scale(1.1);
     background-color: var(--tan-hover); /* tan */
 }
 .img-hero {
@@ -155,7 +155,7 @@ body {
     width: 22%; /* Оставляем по 4 элемента в ряду */
     margin: 15px;
     text-align: center;
-    border-radius: 5px 5px 20px 20px;
+    border-radius: 5px;
     padding: 1%;
     box-shadow: 0 7px 15px rgba(0, 0, 0, 0.2);
     transition: transform 0.2s ease;
@@ -208,6 +208,7 @@ body {
 .competitors {
     padding: 60px 0;
     text-align: center;
+    margin-bottom: 5%;
 }
 .competitors h2{
     margin-bottom: 2%;
@@ -271,6 +272,12 @@ body {
 .our-team .teams{
     max-width: 1200px;
     margin: 0 auto;
+    width: 100vw;
+    text-align: center;
+}
+.our-team .teams .main{
+    font-size: 2.5rem;
+    color: var(--tan-color);
 }
 .our-team .teams .team-inner{
     display: flex;
@@ -282,7 +289,7 @@ body {
 .our-team .teams .team-inner .team{
     display: flex;
     flex-direction: column;
-    width: 13%;
+    width: 22%;
     text-align: center;
 }
 .our-team .teams .team-inner .team h3{
@@ -316,6 +323,10 @@ body {
 }
 .banks .container .bank-inner .bank{
     padding: 2%;
+    transition: transform 0.2s ease;
+}
+.banks .container .bank-inner .bank:hover{
+    transform: scale(105%);
 }
 .banks .container .bank-inner img {
     object-fit: cover;
