@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meit.Track - Трекинг бюджета с AI аналитикой</title>
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -13,7 +14,6 @@
     <header class="header">
         <div class="container">
             <h1 class="logo">Meit.Track</h1>
-            
             <nav>
                 <ul class="nav-links">
                     <li><a href="#"></a></li>
@@ -112,22 +112,31 @@
     <section id="team" class="our-team">
         <div class="teams">
             <h3>Команда</h3>
-            <div class="team-inner">
-                <div class="team">
-                    <img src="./img/Circles Green Clipart Transparent Background, Circle Clipart Green Circle, Round, Graphics, Decoration PNG Image For Free Download.jpg" alt="">
-                    <h3>ФИ</h3>
-                </div>
-                <div class="team">
-                    <img src="./img/Circles Green Clipart Transparent Background, Circle Clipart Green Circle, Round, Graphics, Decoration PNG Image For Free Download.jpg" alt="">
-                    <h3>ФИ</h3>
-                </div>
-                <div class="team">
-                    <img src="img/Circles Green Clipart Transparent Background, Circle Clipart Green Circle, Round, Graphics, Decoration PNG Image For Free Download.jpg" alt="">
-                    <h3>ФИ</h3>
+            <div class="ter">
+                <!-- Swiper контейнер -->
+                <div class="swiper mySwiper">
+                    <!-- Обертка для слайдов -->
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="./img/Circles Green Clipart Transparent Background, Circle Clipart Green Circle, Round, Graphics, Decoration PNG Image For Free Download.jpg" alt="">
+                            <h3>ФИ</h3>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./img/Circles Green Clipart Transparent Background, Circle Clipart Green Circle, Round, Graphics, Decoration PNG Image For Free Download.jpg" alt="">
+                            <h3>ФИ</h3>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="img/Circles Green Clipart Transparent Background, Circle Clipart Green Circle, Round, Graphics, Decoration PNG Image For Free Download.jpg" alt="">
+                            <h3>ФИ</h3>
+                        </div>
+                    </div>
+                    <!-- Добавляем навигацию -->
+                    <div class="swiper-pagination"></div>
                 </div>
             </div>
         </div>
     </section>
+    
 
     <!-- Contact Section -->
     <section id="contact" class="contact">
@@ -144,6 +153,28 @@
             <p>&copy; 2025 Meit.Track. Все права защищены.</p>
         </div>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 1,     // Количество слайдов, видимых на экране
+            spaceBetween: 10,     // Расстояние между слайдами
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,   // Включаем кликабельную пагинацию
+            },
+            breakpoints: {         // Настройки для разных экранов
+                768: {
+                    slidesPerView: 2,   // Для экранов больше 768px показываем 2 слайда
+                },
+                1024: {
+                    slidesPerView: 3,   // Для экранов больше 1024px показываем 3 слайда
+                }
+            }
+        });
+    </script>
 
 </body>
 </html>

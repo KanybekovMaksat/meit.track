@@ -132,24 +132,27 @@ body {
 /* Features Section */
 .features {
     display: flex;
+    flex-wrap: wrap; /* Чтобы элементы могли переноситься на новую строку */
     padding: 5% 0;
     text-align: center;
 }
-.features .container{
+.features .container {
     box-sizing: border-box;
     width: 100vw;
 }
 .features h2 {
     font-size: 2.5rem;
     margin-bottom: 40px;
+    width: 100%;
 }
 
+/* Стили для блока feature */
 .feature {
     display: inline-block;
     box-sizing: border-box;
     background-color: var(--tan-color);
     color: var(--cream-color);
-    width: 22%;
+    width: 22%; /* Оставляем по 4 элемента в ряду */
     margin: 15px;
     text-align: center;
     border-radius: 5px 5px 20px 20px;
@@ -157,7 +160,7 @@ body {
     box-shadow: 0 7px 15px rgba(0, 0, 0, 0.2);
     transition: transform 0.2s ease;
 }
-.feature:hover{
+.feature:hover {
     transform: scale(105%);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
 }
@@ -168,6 +171,22 @@ body {
     min-height: 200px;
     object-fit: cover;
 }
+
+/* Медиазапрос для экрана шириной 768px (планшеты) */
+@media (max-width: 768px) {
+    .feature {
+        width: 48%; /* Два элемента в ряду */
+    }
+}
+
+/* Медиазапрос для экрана шириной 480px (мобильные устройства) */
+@media (max-width: 480px) {
+    .feature {
+        width: 100%; /* Один элемент в ряду */
+        margin: 10px 0; /* Уменьшаем отступы для мобильных */
+    }
+}
+
 
 /* Roadmap Section */
 .roadmap {
@@ -250,19 +269,30 @@ body {
     text-align: center;
 }
 .our-team .teams{
-    display: flex;
-    flex-direction: column;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 .our-team .teams .team-inner{
     display: flex;
     justify-content: center;
-    border: 2px solid red;
     gap: 5%;
+    margin-top: 5%;
+    margin-bottom: 9%;
 }
+.our-team .teams .team-inner .team{
+    display: flex;
+    flex-direction: column;
+    width: 13%;
+    text-align: center;
+}
+.our-team .teams .team-inner .team h3{
+    margin-top: 4%;
+}
+
 .logo{
     display: flex;
     align-items: center;
-    gap: 4px;
+    gap: 5px;
 }
 .banks .container{
     display: flex;
