@@ -262,7 +262,7 @@ body {
 .logo{
     display: flex;
     align-items: center;
-    gap: 5px;
+    gap: 4px;
 }
 .banks .container{
     display: flex;
