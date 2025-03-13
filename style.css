@@ -161,13 +161,12 @@ body {
     width: 100%;
 }
 
-/* Стили для блока feature */
 .feature {
     display: inline-block;
     box-sizing: border-box;
     background-color: var(--tan-color);
     color: var(--cream-color);
-    width: 22%; /* Оставляем по 4 элемента в ряду */
+    width: 22%; 
     margin: 15px;
     text-align: center;
     border-radius: 5px;
@@ -187,14 +186,12 @@ body {
     object-fit: cover;
 }
 
-/* Медиазапрос для экрана шириной 768px (планшеты) */
 @media (max-width: 768px) {
     .feature {
-        width: 48%; /* Два элемента в ряду */
+        width: 48%; 
     }
 }
 
-/* Медиазапрос для экрана шириной 480px (мобильные устройства) */
 @media (max-width: 480px) {
     .header .container{
         display: flex;
@@ -221,7 +218,7 @@ body {
         display: flex;
     }
     .features .feature-inner .feature{
-        width: 10%;
+        width: 25%;
     }
     .competitors h2, p, ul{
         margin-right: 2%;
@@ -349,7 +346,7 @@ body {
 .our-team .teams .team-inner{
     display: flex;
     justify-content: center;
-    gap: 5%;
+    gap: 9%;
     margin-top: 5%;
     margin-bottom: 9%;
 }
@@ -373,10 +370,7 @@ body {
     transform: scale(105%);
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
 }
-.our-team .teams .team-inner .team:nth-child(1){
-    object-fit: cover;
-    height: 100%px;
-}
+
 .our-team .teams .team-inner .team h3{
     margin-top: 4%;
 }
