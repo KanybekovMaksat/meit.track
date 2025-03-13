@@ -58,7 +58,18 @@ body {
     font-weight: 700;
     color: var(--navy-color); /* cream */
     text-transform: uppercase;
+    letter-spacing: 0;
+    margin: 0;
 
+}
+.header .logo span{
+    display: inline-block;
+    margin: 0;
+    letter-spacing: 0;
+    transition: transform 0.2s;
+}
+.header .logo span:hover{
+    transform: scale(115%);
 }
 
 
