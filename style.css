@@ -232,6 +232,9 @@ body {
         margin-left: 50%;
         display: none;
     }
+    .our-team .teams .team-inner .team{
+        margin: 0 2%;
+    }
 }
 /* Roadmap Section */
 .roadmap {
@@ -346,7 +349,7 @@ body {
 .our-team .teams .team-inner{
     display: flex;
     justify-content: center;
-    gap: 9%;
+    gap: 5%;
     margin-top: 5%;
     margin-bottom: 9%;
 }
